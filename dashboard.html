@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - VoiceSense</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+    .dashboard-container {
+      padding: 20px;
+    }
+    .dashboard-container h1 {
+      margin-bottom: 20px;
+    }
+    .dashboard-container .upload-section {
+      margin-bottom: 20px;
+    }
+    .dashboard-container .upload-section input {
+      margin: 10px 0;
+    }
+    .dashboard-container .real-time-section {
+      margin-top: 20px;
+    }
+    .dashboard-container .real-time-section button {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .dashboard-container .real-time-section button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Welcome to VoiceSense</h1>
+    <div class="upload-section">
+      <h2>Train Model</h2>
+      <input type="file" id="audio-file" accept="audio/*">
+      <button onclick="uploadAudio()">Upload Audio</button>
+    </div>
+    <div class="real-time-section">
+      <h2>Real-Time Detection</h2>
+      <button onclick="startRecording()">Start Recording</button>
+      <button onclick="stopRecording()">Stop Recording</button>
+      <div id="audio-visualization"></div>
+      <div id="detected-keywords"></div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
