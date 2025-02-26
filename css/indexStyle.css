@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
+@import url('clash-display.css');
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'ClashDisplay-Medium', sans-serif;
     background: #0a0a0a;
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .hero {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Reduced height so features section is visible */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@ body {
     text-align: center;
 }
 
-#waves {
+#waves, #grid {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,6 +29,7 @@ body {
     z-index: -1;
 }
 
+/* Header */
 header {
     position: absolute;
     top: 20px;
@@ -44,15 +45,7 @@ h1 {
     letter-spacing: 2px;
 }
 
-.sign-in:hover {
-    background: white;
-    color: black;
-}
-
-.content {
-    max-width: 800px;
-}
-
+/* Hero Content */
 h2 {
     font-size: 50px;
     font-weight: 700;
@@ -60,7 +53,7 @@ h2 {
 }
 
 h2 span {
-    color: #0ff;
+    color: #d83aff;
 }
 
 p {
@@ -72,7 +65,7 @@ p {
 }
 
 .cta {
-    background: #0ff;
+    background: #30ff0b;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -86,4 +79,59 @@ p {
 .cta:hover {
     background: #08c;
     transform: scale(1.05);
+}
+
+/* Scroll Indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #30ff0b;
+    font-size: 20px;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -10px); }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Features Section */
+.features {
+    padding: 50px;
+    text-align: center;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'ClashDisplay-Light', sans-serif;
+}
+
+.feature h3 {
+    font-size: 24px;
+    color: #30ff0b;
+    font-family: 'ClashDisplay-Medium', sans-serif;
+}
+
+/* Subtle Grid Background */
+#grid {
+    opacity: 0.1; /* Very low opacity */
 }

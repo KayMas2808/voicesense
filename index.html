@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceSense</title>
+    <title>VoiceSense - AI Keyword Detection</title>
     <link rel="stylesheet" href="css/indexStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
     <script src="https://isuttell.github.io/sine-waves/javascripts/sine-waves.min.js"></script>
@@ -11,16 +11,39 @@
 </head>
 <body>
     <div class="hero">
-        <canvas id="waves"></canvas>
+        <canvas id="grid"></canvas> <!-- Subtle grid background -->
+        <canvas id="waves"></canvas> <!-- Wave effect -->
+
         <header>
             <h1>VoiceSense</h1>
         </header>
+
         <div class="content">
-            <h2>AI-POWERED <span>Keyword detection.</span></h2>
-            <p>Welcome to the introduction of our AI-powered duplicatable voice generator, a groundbreaking technology that is redefining the possibilities of voice synthesis through next-gen deep learning.</p>
-            <button class="cta">Try Now!</button>
+            <h2>REAL-TIME <span style="font-family: ClashDisplay-ExtraLight;">Keyword Detection</span></h2>
+            <p>AI-powered keyword spotting that works across languages, adapts with minimal training, and detects intent in real-time.</p>
+            <button class="cta">Start Detecting</button>
         </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#features" class="scroll-down">↓</a>
     </div>
+
+    <!-- More Information Section -->
+    <section id="features" class="features">
+        <div class="feature">
+            <h3>Few-Shot Learning</h3>
+            <p>Train a new keyword detector with just <b>3-5 samples</b> instead of thousands. Our model rapidly adapts with minimal data.</p>
+        </div>
+        <div class="feature">
+            <h3>Multilingual Support</h3>
+            <p>Supports <b>50+ languages</b>, including Hindi, Mandarin, Arabic, and Swahili. No need for separate models per language.</p>
+        </div>
+        <div class="feature">
+            <h3>Context-Aware AI</h3>
+            <p>Unlike standard keyword detection, VoiceSense can <b>distinguish urgency</b>, e.g., "I need help!" vs. "Help me move this."</p>
+        </div>
+    </section>
+
     <script src="js/indexScript.js"></script>
 </body>
 </html>
