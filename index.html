@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>VoiceSense - Product Description</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceSense</title>
     <link rel="stylesheet" href="css/indexStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+    <script src="https://isuttell.github.io/sine-waves/javascripts/sine-waves.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to VoiceSense</h1>
-        <p>VoiceSense is a real-time multilingual keyword spotting system with context-aware intelligence.</p>
-        <div class="button-group">
-            <a href="login.html" class="btn">Login</a>
-            <a href="signup.html" class="btn">Sign Up</a>
+    <div class="hero">
+        <canvas id="waves"></canvas>
+        <header>
+            <h1>VoiceSense</h1>
+        </header>
+        <div class="content">
+            <h2>AI-POWERED <span>Keyword detection.</span></h2>
+            <p>Welcome to the introduction of our AI-powered duplicatable voice generator, a groundbreaking technology that is redefining the possibilities of voice synthesis through next-gen deep learning.</p>
+            <button class="cta">Try Now!</button>
         </div>
     </div>
+    <script src="js/indexScript.js"></script>
 </body>
 </html>
