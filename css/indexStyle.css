@@ -54,7 +54,7 @@ h2 {
 }
 
 h2 span {
-  color: #d83aff;
+  color: #30ff0b;
 }
 
 p {
@@ -78,7 +78,7 @@ p {
 }
 
 .cta:hover {
-  background: #08c;
+  background: #18520e;
   transform: scale(1.05);
 }
 
