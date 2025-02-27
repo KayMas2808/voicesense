@@ -4,56 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - VoiceSense</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-    }
-    .dashboard-container {
-      padding: 20px;
-    }
-    .dashboard-container h1 {
-      margin-bottom: 20px;
-    }
-    .dashboard-container .upload-section {
-      margin-bottom: 20px;
-    }
-    .dashboard-container .upload-section input {
-      margin: 10px 0;
-    }
-    .dashboard-container .real-time-section {
-      margin-top: 20px;
-    }
-    .dashboard-container .real-time-section button {
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .dashboard-container .real-time-section button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="css/dashboardStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/clash-display.css">
 </head>
-<body>
+<body class="dark-theme">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">VoiceSense</div>
+    <ul class="nav-links">
+      <li><a href="#">Upload</a></li>
+      <li><a href="#">Results</a></li>
+      <li><a href="#">Real-Time</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+    <button id="theme-toggle">☀️</button>
+  </nav>
+
+  <!-- Main Content -->
   <div class="dashboard-container">
-    <h1>Welcome to VoiceSense</h1>
-    <div class="upload-section">
+    <!-- Upload Section -->
+    <section class="upload-section">
       <h2>Train Model</h2>
-      <input type="file" id="audio-file" accept="audio/*">
-      <button onclick="uploadAudio()">Upload Audio</button>
-    </div>
-    <div class="real-time-section">
+      <div id="file-upload" class="file-upload">
+        <p>Choose audio files or drag them here</p>
+        <input type="file" id="audio-file" multiple>
+      </div>
+      <div class="language-select">
+        <label for="language">Select Language:</label>
+        <select id="language">
+          <option>English</option>
+          <option>Spanish</option>
+          <option>French</option>
+        </select>
+      </div>
+      <button class="btn">Process Audio</button>
+    </section>
+
+    <!-- Real-Time Detection -->
+    <section class="real-time-section">
       <h2>Real-Time Detection</h2>
-      <button onclick="startRecording()">Start Recording</button>
-      <button onclick="stopRecording()">Stop Recording</button>
-      <div id="audio-visualization"></div>
-      <div id="detected-keywords"></div>
-    </div>
+      <div class="recording-controls">
+        <button id="start-recording" class="btn">Start Recording</button>
+        <button id="stop-recording" class="btn">Stop Recording</button>
+      </div>
+      <div id="audio-visualization" class="visualization"></div>
+      <div id="detected-keywords" class="keywords"></div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+      <h2>Detection Results</h2>
+      <div id="results-container"></div>
+    </section>
+
+    <!-- Settings Section -->
+    <section class="settings-section">
+      <h2>Settings</h2>
+      <p>Customize your dashboard settings here. (This is a placeholder and can be extended.)</p>
+    </section>
   </div>
+
+  <!-- Footer -->
+  <footer class="dashboard-footer">
+    &copy; 2025 VoiceSense. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
   <script src="js/script.js"></script>
+
 </body>
 </html>

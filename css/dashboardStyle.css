@@ -1,39 +1,143 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('clash-display.css');
+
+/* Base Styles */
 body {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'ClashDisplay-Medium', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Theme */
+body.dark-theme {
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+/* Navbar */
 .navbar {
-    background-color: #333;
-    overflow: hidden;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.container {
-    width: 80%;
-    margin: 20px auto;
-}
-
-.dashboard-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-.keyword-training, .realtime-detection {
-    width: 45%;
-    padding: 20px;
+body.dark-theme .navbar {
+    background-color: #111;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #30ff0b;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .dashboard-container {
+    background-color: #1a1a1a;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Sections */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #30ff0b;
+    display: inline-block;
+}
+
+/* Upload Section */
+.file-upload {
+    border: 2px dashed #666;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.file-upload:hover {
+    border-color: #30ff0b;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #30ff0b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #08c;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+    }
+    .navbar .nav-links li {
+        margin: 5px 0;
+    }
 }
