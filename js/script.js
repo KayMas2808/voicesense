@@ -1,48 +1,43 @@
-// Theme Toggle Functionality
+
 const themeToggle = document.getElementById("theme-toggle");
 
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
   document.body.classList.toggle("light-theme");
 
-  // Update the toggle button icon
   if (document.body.classList.contains("dark-theme")) {
-    themeToggle.textContent = "☀️"; // Light mode icon
+    themeToggle.textContent = "☀️";
   } else {
-    themeToggle.textContent = "🌙"; // Dark mode icon
+    themeToggle.textContent = "🌙";
   }
 });
 
-// File Upload Handling
 const fileUploadDiv = document.getElementById("file-upload");
 const audioInput = document.getElementById("audio-file");
 
-// Drag-and-Drop Events
 fileUploadDiv.addEventListener("dragover", (e) => {
   e.preventDefault();
-  fileUploadDiv.style.borderColor = "#30ff0b"; // Highlight border on dragover
+  fileUploadDiv.style.borderColor = "#30ff0b";
 });
 
 fileUploadDiv.addEventListener("dragleave", (e) => {
   e.preventDefault();
-  fileUploadDiv.style.borderColor = "#666"; // Reset border color on dragleave
+  fileUploadDiv.style.borderColor = "#666";
 });
 
 fileUploadDiv.addEventListener("drop", (e) => {
   e.preventDefault();
-  fileUploadDiv.style.borderColor = "#666"; // Reset border color on drop
+  fileUploadDiv.style.borderColor = "#666";
 
   const files = e.dataTransfer.files;
   handleFileUpload(files);
 });
 
-// File Input Change Event
 audioInput.addEventListener("change", () => {
   const files = audioInput.files;
   handleFileUpload(files);
 });
 
-// Function to Handle File Uploads
 function handleFileUpload(files) {
   if (files.length > 0) {
     let fileNames = [];
@@ -55,7 +50,6 @@ function handleFileUpload(files) {
   }
 }
 
-// Real-Time Detection Placeholder
 const startRecordingButton = document.getElementById("start-recording");
 const stopRecordingButton = document.getElementById("stop-recording");
 const audioVisualization = document.getElementById("audio-visualization");
@@ -63,10 +57,10 @@ const detectedKeywords = document.getElementById("detected-keywords");
 
 startRecordingButton.addEventListener("click", () => {
   alert("Recording started! (This is a placeholder for real-time detection functionality.)");
-  audioVisualization.style.backgroundColor = "#30ff0b"; // Simulate visualization activation
+  audioVisualization.style.backgroundColor = "#30ff0b";
 });
 
 stopRecordingButton.addEventListener("click", () => {
   alert("Recording stopped! (This is a placeholder for real-time detection functionality.)");
-  audioVisualization.style.backgroundColor = ""; // Reset visualization background
+  audioVisualization.style.backgroundColor = "";
 });

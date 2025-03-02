@@ -12,7 +12,7 @@ body {
 .hero {
   position: relative;
   width: 100vw;
-  height: 100vh; /* Reduced height so features section is visible */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,6 @@ body {
   z-index: -1;
 }
 
-/* Header */
 header {
   position: absolute;
   top: 20px;
@@ -45,7 +44,6 @@ h1 {
   letter-spacing: 2px;
 }
 
-/* Hero Content */
 h2 {
   font-size: 50px;
   font-weight: 700;
@@ -81,7 +79,6 @@ p {
   transform: scale(1.05);
 }
 
-/* Scroll Indicator */
 .scroll-down {
   position: absolute;
   bottom: 10px;
@@ -94,18 +91,15 @@ p {
   text-decoration: none;
 }
 
-/* Bounce Animation */
 @keyframes bounce {
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, -10px); }
 }
 
-/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Features Section */
 .features {
   padding: 50px;
   text-align: center;
@@ -131,12 +125,10 @@ html {
   font-family: 'ClashDisplay-Medium', sans-serif;
 }
 
-/* Subtle Grid Background */
 #grid {
-  opacity: 0.1; /* Very low opacity */
+  opacity: 0.1;
 }
 
-/* New About Section */
 .about {
   padding: 50px;
   background: #151515;
@@ -155,37 +147,6 @@ html {
   margin: 0 auto;
 }
 
-/* New Testimonials Section */
-.testimonials {
-  padding: 50px;
-  background: #1a1a1a;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #30ff0b;
-}
-
-.testimonial {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 20px auto;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.testimonial span {
-  display: block;
-  margin-top: 10px;
-  font-style: italic;
-  opacity: 0.8;
-}
-
-/* New Contact Section */
 .contact {
   padding: 50px;
   background: #111;
@@ -237,7 +198,6 @@ html {
   transform: scale(1.05);
 }
 
-/* New Footer */
 .footer {
   padding: 20px;
   background: #000;

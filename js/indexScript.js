@@ -1,4 +1,4 @@
-// Waves Effect
+// waves effect
 var waves = new SineWaves({
     el: document.getElementById('waves'),
     speed: 5,
@@ -23,7 +23,7 @@ var waves = new SineWaves({
     }
   });
   
-  // Grid Background
+  // grid background
   const gridCanvas = document.getElementById('grid');
   const ctx = gridCanvas.getContext('2d');
   
@@ -32,7 +32,7 @@ var waves = new SineWaves({
   
   function drawGrid() {
     ctx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)'; // White grid with low opacity
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
     ctx.lineWidth = 0.5;
     for (let y = 0; y < gridCanvas.height; y += 50) {
       ctx.beginPath();
@@ -56,7 +56,7 @@ var waves = new SineWaves({
     drawGrid();
   });
   
-  // Contact Form Submission Handler
+  // contact form submission handler
   document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you for contacting VoiceSense!');
