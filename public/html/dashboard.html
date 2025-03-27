@@ -24,23 +24,24 @@
         <section class="upload-section">
           <h2>Train Model</h2>
           <div class="language-select">
-            <label for="language">Select Language:</label>
-            <select id="language">
-              <option>English</option>
-              <option>Spanish</option>
-              <option>French</option>
-              <option>German</option>
-              <option>Mandarin</option>
-              <option>Chinese</option>
-              <option>Hindi</option>
-            </select>
+              <label for="language">Select Language:</label>
+              <select id="language">
+                  <option>English</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                  <option>German</option>
+                  <option>Mandarin</option>
+                  <option>Chinese</option>
+                  <option>Hindi</option>
+              </select>
           </div>
           <div id="file-upload" class="file-upload">
-            <p>Choose audio files or drag them here</p>
-            <input type="file" id="audio-file" multiple />
+              <p>Choose audio files or drag them here</p>
+              <input type="file" id="audio-file-train" multiple style="display: none;"/>
+              <label for="audio-file-train" class="custom-file-upload-button">Upload Training audio</label>
           </div>
           <button class="btn">Process Audio</button>
-        </section>
+      </section>
       </div>
       <div class="sections-container">
         <h2>Detect from audio</h2>
@@ -65,23 +66,30 @@
           <section class="batch-section">
             <h2>Batch Processing</h2>
             <div class="file-upload">
-              <label for="audio-file" class="custom-file-upload-button"
-                >Upload file</label
-              >
-              <input type="file" id="audio-file" multiple />
+                <input type="file" id="audio-file" multiple style="display: none;"/>
+                <label for="audio-file" class="custom-file-upload-button">Upload file</label>
             </div>
             <div>
-              <button id="process-batch" class="btn">
-                Process Uploaded File
-              </button>
+                <button id="process-batch" class="btn">
+                    Process Uploaded File
+                </button>
             </div>
-          </section>
+        </section>
         </div>
       </div>
 
       <section class="results-section">
         <h2>Detection Results</h2>
         <div id="results-container"></div>
+        <section class="results-section">
+          <h2>Detection Results</h2>
+          <div id="results-container"></div>
+          <!-- Add these buttons dynamically via JavaScript or statically -->
+          <div class="feedback-controls">
+              <button class="feedback-btn thumbs-up" data-keyword="">👍 Accurate</button>
+              <button class="feedback-btn thumbs-down" data-keyword="">👎 Inaccurate</button>
+          </div>
+      </section>
       </section>
 
       <section class="settings-section">
