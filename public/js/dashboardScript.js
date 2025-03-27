@@ -71,30 +71,6 @@ class AudioProcessor {
         }
     }
 
-    async handleBatchUpload(event) {
-        const files = event.target.files;
-        const formData = new FormData();
-
-        for (let file of files) {
-            formData.append('audioFiles', file);
-        }
-
-        formData.append('type', 'batch');
-        formData.append('language', this.detectedLanguage);
-        formData.append('keywords', JSON.stringify(this.keywords));
-
-        try {
-            const response = await fetch('/api/process-audio', {
-                method: 'POST',
-                body: formData
-            });
-            const results = await response.json();
-            this.displayResults(results);
-        } catch (error) {
-            console.error('Batch processing failed:', error);
-        }
-    }
-
     displayResults(results) {
         const resultsContainer = document.getElementById('results-container');
         resultsContainer.innerHTML = results.map(result => `

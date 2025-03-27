@@ -102,8 +102,8 @@ app.get('/login.html', (req, res) => {
     res.sendFile(path.join(process.cwd(), 'public/html/login.html'));
 });
 
-app.get('/dashboard.html', (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'public/html/dashboard.html'));
+app.get('/index.php', (req, res) => {
+    res.sendFile(path.join(process.cwd(), 'http://localhost:8080/'));
 });
 
 // Multer Configuration
